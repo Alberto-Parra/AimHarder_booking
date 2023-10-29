@@ -43,8 +43,7 @@ def main():
     offset=timedelta(days=2)
     fecha_reserva=today+offset
 
-    fecha_reserva_str=str(fecha_reserva.day)+'/'+str(fecha_reserva.month)+'/'+str(fecha_reserva.year)+'\n'
-    fecha_reserva_str
+    fecha_reserva_str=str(fecha_reserva.month)+'/'+str(fecha_reserva.day)+'/'+str(fecha_reserva.year)+'\n'
 
     # Write the date in the input
     select_day = WebDriverWait(driver,3).until(EC.element_to_be_clickable((By.ID, 'selw')))
@@ -52,11 +51,11 @@ def main():
     select_day.send_keys(fecha_reserva_str)
 
     # click in book class
-    book_botton = WebDriverWait(driver,3).until(EC.element_to_be_clickable((By.XPATH, '(//a[text()="Reservar"])[1]')))
+    book_botton = WebDriverWait(driver,3).until(EC.element_to_be_clickable((By.XPATH, '(//a[text()="Book"])[1]')))
     book_botton.click()
     
     #Close the browser
-    time.sleep(3)
+    time.sleep(30)
     driver.close()
 
 if __name__ == '__main__':
