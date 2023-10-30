@@ -44,7 +44,6 @@ def main():
     reservas_url = 'https://project96.aimharder.com/schedule'
     driver.get(reservas_url)
     
-
     # To book the spot in two day from now
     today=date.today()
     offset=timedelta(days=2)
